@@ -1,0 +1,21 @@
+<div align='center'>
+    <ejs-chart #chart id='chart' style='display:block;' [chartArea]='chartArea' [width]='width' align='center' [primaryXAxis]='primaryXAxis'
+            [primaryYAxis]='primaryYAxis' [title]='title' [tooltip]='tooltip' (pointClick)='pointClick($event)' >
+      <e-series-collection>
+    <e-series [dataSource]='data' type='Column' xName='x' yName='y' width=2></e-series>
+      </e-series-collection>
+    </ejs-chart>
+</div>
+<div class="row material2" >
+   <ejs-breadcrumb [maxItems]="3" [enableNavigation]="false" (itemClick)="clickHandler($event)" >
+      <e-breadcrumb-items>
+        <e-breadcrumb-item  text="Level 1" ></e-breadcrumb-item>
+        <e-breadcrumb-item  text="Level 2" ></e-breadcrumb-item>
+        <e-breadcrumb-item  text="Level 3" ></e-breadcrumb-item>
+      </e-breadcrumb-items>
+        <ng-template #separatorTemplate>
+          <span class="e-bicons e-arrow"></span>
+          </ng-template>
+  </ejs-breadcrumb>
+</div>
+   
